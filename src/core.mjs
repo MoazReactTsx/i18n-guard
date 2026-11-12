@@ -173,7 +173,7 @@ export function analyze(root, cfg) {
   for (const [prefix, where] of dynamic) {
     for (const lang of langs) {
       const node = getPath(raws[lang], prefix);
-      if (!node || typeof node !== 'object') warn('dynamic-group-missing', `${prefix}.*`, { locale: lang, where });
+      if ((!node || typeof node !== 'object') && !Object.keys(locales[lang]).some((k) => k.startsWith(prefix))) warn('dynamic-group-missing', `${prefix}.*`, { locale: lang, where });
     }
   }
   const usedKeys = new Set(used.keys());
