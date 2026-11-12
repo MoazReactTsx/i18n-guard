@@ -1,0 +1,16 @@
+{
+  "name": "i18n-guard",
+  "version": "1.0.0",
+  "description": "Zero-dependency checker that finds missing, untranslated and unused translation keys (i18next, vue-i18n, Flutter easy_localization).",
+  "type": "module",
+  "bin": { "i18n-guard": "bin/i18n-guard.mjs" },
+  "main": "src/core.mjs",
+  "exports": { ".": "./src/core.mjs" },
+  "files": ["bin", "src", "README.md"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test test/guard.test.mjs"
+  },
+  "keywords": ["i18n", "translation", "locale", "lint", "i18next", "flutter", "easy_localization"],
+  "license": "MIT"
+}
