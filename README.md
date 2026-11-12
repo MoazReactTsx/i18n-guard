@@ -11,10 +11,17 @@ Works with **i18next / react-i18next / vue-i18n** (`t('a.b')`) and **Flutter eas
 
 ```bash
 # 1. let it detect your project and write i18n-guard.config.json
-npx i18n-guard init
+npx github:MoazReactTsx/i18n-guard init
 
 # 2. check
-npx i18n-guard
+npx github:MoazReactTsx/i18n-guard
+```
+
+Or install it as a dev dependency straight from GitHub, then use the short `i18n-guard` command:
+
+```bash
+npm i -D github:MoazReactTsx/i18n-guard
+npx i18n-guard init
 ```
 
 The exit code is `1` when something would show up as a raw key, so it fits CI and `prebuild` hooks:
